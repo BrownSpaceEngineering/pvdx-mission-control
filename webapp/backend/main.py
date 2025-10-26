@@ -12,6 +12,7 @@ class CacheItem(BaseModel):
     value: str
     expire_seconds: int = 3600
 
+
 @app.get("/")
 async def root():
     """Root endpoint."""
