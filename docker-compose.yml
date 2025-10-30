@@ -1,3 +1,8 @@
+# Do we want a separate dockerfile now that we're including SQLite? There's no prebuilt image for it...
+# Update: I included one just in case, we don't have to use it - Vivek
+
+version: "3.9"
+
 services:
   db:
     image: postgres:16-alpine
@@ -6,12 +11,27 @@ services:
     environment:
       - POSTGRES_USER=myuser
       - POSTGRES_PASSWORD=mypassword
+
   cache:
     image: redis:7-alpine
     ports:
       - "6379:6379" 
+
   mq:
     image: rabbitmq:3-management-alpine
     ports:
-      - "5672:5672"  # AMQP port
-      - "15672:15672" # Management UI porta
+      - "5672:5672"      # AMQP port
+      - "15672:15672"    # Management UI port
+
+  mission-control:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./sqlite_data:/app/sqlite_data  # persist SQLite DB file
+    environment:
+      - SQLITE_DB_PATH=/app/sqlite_data/mission_control.db # temp path for now, we can change
+    depends_on:
+      - cache
