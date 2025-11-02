@@ -1,9 +1,11 @@
-import SatelliteControlPanel from "@/components/SatelliteControlPanel";
+import Navbar from "@/components/Navbar";
+import CodingEnv from "@/components/CodingEnv"
 
 export default function Home() {
-  return (
-    <div className="min-h-screen p-8 bg-gray-50 dark:bg-gray-900">
-      <SatelliteControlPanel />
-    </div>
-  );
+    return (
+        <div className="h-screen flex flex-col overflow-hidden">
+            <Navbar />
+            <CodingEnv />
+        </div>
+    );
 }
