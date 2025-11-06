@@ -50,7 +50,7 @@ export default function CodingEnv() {
                     <div className="w-80 bg-[#1a3a5c] rounded-lg p-6 flex flex-col gap-6">
                         {/* Display Screen */}
                         <div className="bg-white rounded-lg flex-1 p-4 shadow-inner">
-                            <div className="text-gray-600 text-center h-full flex items-center justify-center">
+                            <div className="text-gray-600 text-xl text-center h-full flex items-center justify-center">
                                 <p className="text-gray-400">Display Output</p>
                             </div>
                         </div>
