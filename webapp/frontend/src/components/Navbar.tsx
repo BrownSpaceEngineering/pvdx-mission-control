@@ -17,16 +17,16 @@ export default function Navbar() {
 
             {/* Navigation Links */}
             <div className="flex items-center gap-12">
-                <a href="#" className="text-white hover:text-gray-300 transition-colors font-semibold text-lg">
+                <a href="#" className="text-white hover:text-gray-300 transition-colors font-semibold text-xl">
                     Home
                 </a>
-                <a href="#" className="text-white hover:text-gray-300 transition-colors font-semibold text-lg">
+                <a href="#" className="text-white hover:text-gray-300 transition-colors font-semibold text-xl">
                     PVDX
                 </a>
-                <a href="#" className="text-white hover:text-gray-300 transition-colors font-semibold text-lg">
+                <a href="#" className="text-white hover:text-gray-300 transition-colors font-semibold text-xl">
                     Learn
                 </a>
-                <a href="#" className="text-white hover:text-gray-300 transition-colors font-semibold text-lg">
+                <a href="#" className="text-white hover:text-gray-300 transition-colors font-semibold text-xl">
                     About
                 </a>
             </div>
