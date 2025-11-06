@@ -1,11 +1,18 @@
+import Image from 'next/image';
 export default function Navbar() {
     return (
         <nav className="w-full bg-[#2F3F60] px-8 py-4 flex items-center justify-between">
             {/* Logo Section */}
             <div className="flex items-center gap-3">
+                <Image
+                src="/bse-logo-light.png"
+                alt="BSE Logo"
+                width={130} // adjust size as needed
+                height={130} // adjust size as needed
+                />
                 {/* Placeholder for logo image */}
                 <div className="w-10 h-10"></div>
-                <span className="text-white font-bold text-2xl">BSE</span>
+                <span className="text-white font-bold text-2xl"></span>
             </div>
 
             {/* Navigation Links */}
