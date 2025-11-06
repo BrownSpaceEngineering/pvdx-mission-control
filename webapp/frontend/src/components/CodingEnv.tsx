@@ -29,7 +29,7 @@ export default function CodingEnv() {
                         <button
                             key={category.id}
                             onClick={() => setSelectedCategory(category.id)}
-                            className={`${category.color} text-white px-6 py-3 rounded-lg font-medium hover:opacity-90 transition-opacity ${selectedCategory === category.id ? "underline" : ""
+                            className={`${category.color} text-white text-xl px-6 py-3 rounded-lg font-bold hover:opacity-90 transition-opacity ${selectedCategory === category.id ? "underline" : ""
                                 }`}
                         >
                             {category.name}

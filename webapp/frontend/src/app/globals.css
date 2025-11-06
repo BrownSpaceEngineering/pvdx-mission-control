@@ -1,14 +1,18 @@
+/* URL import MUST go first as the import */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 @import "tailwindcss";
+
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-orbitron: 'Orbitron', sans-serif;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-orbitron);
   --font-mono: var(--font-geist-mono);
 }
 
@@ -22,6 +26,5 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: 'Lucida Console', Helvetica, sans-serif;
-  font-weight: bold;
+  font-family: var(--font-sans);
 }

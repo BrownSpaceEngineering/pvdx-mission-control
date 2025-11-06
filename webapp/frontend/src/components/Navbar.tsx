@@ -7,8 +7,8 @@ export default function Navbar() {
                 <Image
                 src="/bse-logo-light.png"
                 alt="BSE Logo"
-                width={130} // adjust size as needed
-                height={130} // adjust size as needed
+                width={140} // adjust size as needed
+                height={140} // adjust size as needed
                 />
                 {/* Placeholder for logo image */}
                 <div className="w-10 h-10"></div>
