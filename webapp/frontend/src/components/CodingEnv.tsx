@@ -43,7 +43,11 @@ export default function CodingEnv() {
                 <div className="bg-gray-300 rounded-xl h-full p-6 flex gap-6">
                     {/* Central Block Area */}
                     <div className="flex-1 flex flex-col">
-                        {/* Empty workspace */}
+                        {/* Workspace */}
+                        <iframe
+                            src="/snap/snap.html"
+                            className="w-full h-full border-none rounded-lg"
+                        ></iframe>
                     </div>
 
                     {/* Right Panel - Display and Controls */}
