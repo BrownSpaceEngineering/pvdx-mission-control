@@ -6,7 +6,11 @@ export default function Navbar() {
         <nav className="w-full bg-[#2F3F60] px-8 py-4 flex items-center justify-between">
             {/* Logo Section */}
             <div className="flex items-center gap-3">
-                <Link href="https://brownspace.io">
+                <a
+                    href="https://brownspace.io"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
                     <Image
                         src="/bse-logo-light.png"
                         alt="BSE Logo"
@@ -14,7 +18,7 @@ export default function Navbar() {
                         height={140}
                         className="cursor-pointer"
                     />
-                </Link>
+                </a>
             </div>
 
             {/* Navigation Links */}
