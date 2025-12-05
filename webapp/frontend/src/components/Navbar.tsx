@@ -132,11 +132,11 @@ export default function Navbar() {
                 ✕
             </button>
 
-            <h3 className="text-[28px] font-bold text-white mb-4 text-center">About PVDX</h3>
+            <h3 className="text-[28px] font-bold text-white mb-4 text-center">Frequently Asked Questions</h3>
 
             <div className="flex justify-center mb-6">
             <Image
-                src="/pvdx-space.jpg"
+                src="/pvdx-prototype.jpg"
                 alt="Example"
                 width={360}
                 height={240}
@@ -148,22 +148,12 @@ export default function Navbar() {
             <div className="overflow-y-auto h-[70%] text-left no-scrollbar">
                 <p className="text-white text-sm font-bold leading-relaxed tracking-widest mb-6">
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                The primary mission of PVDX (Perovskite Visuals and Degradation eXperiment)
-                is to test the performance of next-generation perovskite solar cells in the harsh orbital 
-                environment. Perovskites are emerging as a low-cost challenger to silicon for making highly 
-                efficient solar cells. A research team led by Brown professor Nitin Padture has made key 
-                contributions to the development of perovskites, and the BSE team is working with Padture’s 
-                group to develop perovskite cells for PVDX. The team aims to find out how this type of solar 
-                cell, which has never flown in space, performs in an environment where temperatures can swing 
-                by as much a 500 degrees Fahrenheit. 
-                </p>
-                <p className="text-white text-sm font-bold leading-relaxed tracking-widest mb-6">
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                PVDX’s secondary mission is to engage K-12 students in space exploration. 
-                The plan is to allow students to send short messages to the satellite, which is displayed on an LED screen
-                on one side of the spacecraft. A camera attached to a small robotic arm on PVDX snaps a picture of the 
-                display — with an orbital view of the Earth providing the backdrop — and transmits that picture back to the students from space. 
-                The idea is that space is accessible, and getting there isn’t as difficult as you may think.
+                &lt; Add frequently asked questions here &gt;
+
+                
+                <p className="text-white text-sm font-bold leading-relaxed tracking-widest mb-6"></p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                Still have questions? Contact us at bse@brown.edu!
                 </p>
             </div>
             </div>
