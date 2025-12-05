@@ -28,3 +28,13 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans);
 }
+
+/* Hide scrollbar for all elements with .no-scrollbar */
+.no-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
