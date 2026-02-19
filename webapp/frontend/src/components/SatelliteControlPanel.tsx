@@ -135,7 +135,9 @@ export default function SatelliteControlPanel() {
                 </button>
             </div>
 
-            {/* System Commands */}
+            {/* 
+            System Commands 
+            */}
             <div className="p-6 border border-gray-300 dark:border-gray-700 rounded-lg">
                 <h2 className="text-xl font-semibold mb-4">System Commands</h2>
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
