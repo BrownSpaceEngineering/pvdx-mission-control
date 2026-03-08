@@ -14,13 +14,13 @@ interface CodeEditorPanelProps {
 }
 
 const editorTheme = EditorView.theme({
-  "&": { backgroundColor: "#1a3a5c", color: "#ffffff", fontSize: "14px", height: "100%" },
+  "&": { backgroundColor: "#1a3a5c", color: "#ffffff", fontSize: "14px" },
   ".cm-content": { caretColor: "#41afaa", fontFamily: "monospace" },
   ".cm-cursor, .cm-dropCursor": { borderLeftColor: "#41afaa" },
   "&.cm-focused .cm-selectionBackground, ::selection": { backgroundColor: "#2F3F60" },
   ".cm-activeLine": { backgroundColor: "#253b5a" },
-  ".cm-gutters": { backgroundColor: "#2F3F60", color: "#8b9dc3", border: "none" },
-  ".cm-activeLineGutter": { backgroundColor: "#41afaa", color: "#ffffff" },
+  ".cm-gutters": { backgroundColor: "#1a3a5c", color: "#8b9dc3", border: "none" },
+  ".cm-activeLineGutter": { backgroundColor: "#253b5a", color: "#41afaa" },
   ".cm-lineNumbers": { color: "#8b9dc3" },
 }, { dark: true });
 
@@ -48,10 +48,9 @@ export default function CodeEditorPanel({ code, onChange, onRun, errors, autoRun
         )}
       </div>
 
-      <div className="flex-1 overflow-auto">
+      <div className="flex-1 overflow-auto min-h-0">
         <CodeMirror
           value={code}
-          height="100%"
           extensions={[javascript()]}
           theme={editorTheme}
           onChange={onChange}

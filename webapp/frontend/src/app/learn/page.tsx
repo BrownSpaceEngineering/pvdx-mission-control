@@ -5,7 +5,9 @@ export default function Home() {
     return (
         <div className="h-screen flex flex-col overflow-hidden">
             <Navbar />
-            <CodingEnv />
+            <main className="flex-1 overflow-y-auto min-h-0">
+                <CodingEnv />
+            </main>
         </div>
     );
 }

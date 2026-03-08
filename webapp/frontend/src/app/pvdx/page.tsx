@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
-import React from "react"; 
+import TelemetryPanel from "@/components/TelemetryPanel";
+import React from "react";
 
 const BatteryCircle = ({ voltage, label }: { voltage: string, label: string }) => (
   <div className="flex flex-col items-center gap-2">
@@ -21,6 +22,11 @@ export default function Home() {
         
         {/* Main grid layout for the cards */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+          {/* Live Telemetry (Spans 2 columns) */}
+          <div className="lg:col-span-2">
+            <TelemetryPanel />
+          </div>
 
           {/* Card 1: Last Transmission (Spans 2 columns) */}
           <div className="lg:col-span-2 bg-[#1a2d4a] rounded-2xl p-6 shadow-lg">

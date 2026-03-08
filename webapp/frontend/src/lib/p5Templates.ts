@@ -1,30 +1,29 @@
-//  template for p5.js canvas
-
 export const templates: Record<string, string> = {
   basic: `p.setup = function() {
-  p.createCanvas(400, 400);
+  p.createCanvas(256, 64);
   p.textAlign(p.CENTER, p.CENTER);
 };
 
 p.draw = function() {
-  p.background(26, 58, 92);
+  p.background(255);
+
+  p.fill(26, 58, 92);
+  p.stroke(65, 175, 170);
+  p.strokeWeight(2);
+  p.rect(p.width / 2 - 40, p.height / 2 - 18, 80, 36, 4);
 
   p.fill(255);
-  p.textSize(80);
+  p.noStroke();
+  p.textSize(24);
   p.textStyle(p.BOLD);
   p.text("BSE", p.width / 2, p.height / 2);
-
-  p.noFill();
-  p.stroke(65, 175, 170);
-  p.strokeWeight(4);
-  p.rect(60, 120, 280, 160, 10);
 };`,
 
-  input: `let x = 200;
-let y = 200;
+  input: `let x = 128;
+let y = 32;
 
 p.setup = function() {
-  p.createCanvas(400, 400);
+  p.createCanvas(256, 64);
 };
 
 p.draw = function() {
@@ -32,7 +31,7 @@ p.draw = function() {
   x = p.mouseX;
   y = p.mouseY;
   p.fill(70, 110, 180);
-  p.ellipse(x, y, 50, 50);
+  p.ellipse(x, y, 16, 16);
 };
 
 p.mousePressed = function() {
@@ -40,29 +39,29 @@ p.mousePressed = function() {
 };`,
 
   loops: `p.setup = function() {
-  p.createCanvas(400, 400);
+  p.createCanvas(256, 64);
   p.noLoop();
 };
 
 p.draw = function() {
   p.background(240);
-  for (let i = 0; i < 5; i++) {
-    for (let j = 0; j < 5; j++) {
-      let x = 50 + i * 80;
-      let y = 50 + j * 80;
+  for (let i = 0; i < 8; i++) {
+    for (let j = 0; j < 4; j++) {
+      let x = 16 + i * 32;
+      let y = 8 + j * 16;
       p.fill(0, 160, 225);
-      p.ellipse(x, y, 40, 40);
+      p.ellipse(x, y, 10, 10);
     }
   }
 };`,
 
-  logic: `let ballX = 200;
-let ballY = 200;
-let speedX = 3;
-let speedY = 2;
+  logic: `let ballX = 128;
+let ballY = 32;
+let speedX = 2;
+let speedY = 1.5;
 
 p.setup = function() {
-  p.createCanvas(400, 400);
+  p.createCanvas(256, 64);
 };
 
 p.draw = function() {
@@ -78,30 +77,30 @@ p.draw = function() {
   } else {
     p.fill(175, 75, 145);
   }
-  p.ellipse(ballX, ballY, 40, 40);
+  p.ellipse(ballX, ballY, 14, 14);
 };`,
 
-  variables: `let circleSize = 50;
+  variables: `let circleSize = 10;
 let growing = true;
 let xPos = 0;
 
 p.setup = function() {
-  p.createCanvas(400, 400);
+  p.createCanvas(256, 64);
 };
 
 p.draw = function() {
   p.background(220);
 
   if (growing) {
-    circleSize = circleSize + 1;
+    circleSize = circleSize + 0.3;
   } else {
-    circleSize = circleSize - 1;
+    circleSize = circleSize - 0.3;
   }
 
-  if (circleSize > 100) growing = false;
-  else if (circleSize < 50) growing = true;
+  if (circleSize > 28) growing = false;
+  else if (circleSize < 10) growing = true;
 
-  xPos = xPos + 2;
+  xPos = xPos + 1.5;
   if (xPos > p.width) xPos = 0;
 
   p.fill(215, 100, 44);
@@ -111,19 +110,19 @@ p.draw = function() {
   math: `let angle = 0;
 
 p.setup = function() {
-  p.createCanvas(400, 400);
+  p.createCanvas(256, 64);
 };
 
 p.draw = function() {
   p.background(220);
   p.translate(p.width / 2, p.height / 2);
 
-  for (let i = 0; i < 100; i++) {
+  for (let i = 0; i < 15; i++) {
     let r = i * 2;
-    let x = r * p.cos(angle + i * 0.2);
-    let y = r * p.sin(angle + i * 0.2);
+    let x = r * p.cos(angle + i * 0.5);
+    let y = r * p.sin(angle + i * 0.5);
     p.fill(175, 75, 145, 200);
-    p.ellipse(x, y, 10, 10);
+    p.ellipse(x, y, 6, 6);
   }
   angle = angle + 0.02;
 };`,
